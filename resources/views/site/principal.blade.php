@@ -2,6 +2,8 @@
 
 @section('titulo', 'Home')
 
+@isset($app, $page_id, $count_p, $count_i)
+
 @section('conteudo')
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
@@ -11,95 +13,45 @@
             <p class="lead text-white ">Tudo sobre nóticias de tecnologia.</p>                  
         </div>
     </div>
-</section>
+</section>    
+
+
 <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n1.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n2.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n3.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n4.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n5.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n6.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n7.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n8.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n9.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 15rem;">
-                <img src="{{ asset('img/n10.jpg') }}" class="card-img-top" width="150" height="150">
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>                                
-            </div>
-        </div>
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 justify-content-center">            
         
-      </div>
-    </div>
-  </div>
+        @for ($i = $count_i; $i < $count=$count_p; $i++)
 
+            <div class="col">
+                <div class="card" style="width: 15rem;">                
+                    <img src="https://picsum.photos/200" class="card-img-top" width="150" height="150">
+                    <h5 class="card-title truncate">{{ $app[$i]->title }}</h5>
+                    <div class="card-body content">
+                        <p class="card-text truncate">{{ $app[$i]->body }}</p>
+                    </div>                    
+                    <a href="{{ route('site.noticia', $p1=$i) }}" class="btn btn-link">Leia mais...</a>
+                </div>
+            </div>       
+        
+        @endfor         
+        
+    </div>
+</div>
+
+<div class="container">    
+    <div class="row py-5 justify-content-center">        
+        @if ($page_id != 1)                
+            <a href="{{ route('site.principal', $page_id=$page_id-1) }}" type="button" class="col-4 btn btn-outline-primary">Voltar</a>               
+        @endif            
+           
+        <a href="{{ route('site.principal', $page_id=$page_id+1) }}" type="button" class="col-4 btn btn-outline-primary">Proximo</a>
+
+    </div>
+</div>
+
+  
 @endsection
 
+
+@endisset

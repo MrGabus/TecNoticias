@@ -7,6 +7,43 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>       
         
+        <style>
+            .truncate {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+
+            .content {
+            width:100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+
+            .rodape {
+            width: 100%;
+            }
+
+            .redes-sociais, .area-contato, .localizacao {
+                width: 33.333%;
+                border-top:solid 1px #ccc;
+                float: left;
+                text-align: center;
+                background-color: #f8f8f8;
+                height: 250px;
+            }
+
+            .redes-sociais, .area-contato, .localizacao p, span {
+                color: #333333;
+            }
+
+            .redes-sociais img {
+                margin: 0px 15px 0px 15px;
+            }
+            
+        </style>
+
     </head>
 
     <body>
@@ -15,6 +52,25 @@
             @yield('conteudo')
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-        </main>        
+        </main>
+        
+        <div class="rodape">
+            <div class="redes-sociais">
+                <h2>Redes sociais</h2>
+                <img src="{{ asset('img/facebook.png') }}">
+                <img src="{{ asset('img/linkedin.png') }}">
+                <img src="{{ asset('img/youtube.png') }}">
+            </div>
+            <div class="area-contato">
+                <h2>Contato</h2>
+                <span>(11) 3333-4444</span>
+                <br>
+                <span>supergestao@tecnoticias.com.br</span>
+            </div>
+            <div class="localizacao">
+                <h2>Localização</h2>
+                <img src="{{ asset('img/mapa.png') }}">
+            </div>
+        </div>
     </body>
 </html>
