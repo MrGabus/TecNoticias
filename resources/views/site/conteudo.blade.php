@@ -41,11 +41,13 @@
 
 <div class="container">    
     <div class="row py-5 justify-content-center">        
-        @if ($page_id != 1)                
-            <a href="{{ route('site.principal')}}" type="button" class="col-4 btn btn-outline-primary">Voltar</a>               
+        @if ($page_id > 0)                
+            <a href="{{ route('site.principal') }}" type="button" class="col-4 btn btn-outline-primary">Voltar</a>               
         @endif            
-           
+        
+        @if ($page_id < 10)       
         <a href="{{ route('site.conteudo', $page_id=$page_id+1) }}" type="button" class="col-4 btn btn-outline-primary">Proximo</a>
+        @endif
 
     </div>
 </div>
