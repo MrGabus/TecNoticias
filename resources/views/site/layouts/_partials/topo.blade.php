@@ -11,10 +11,10 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Sobre-Nós</a>
+            <a class="nav-link active" aria-current="page" href="/sobre-nos">Sobre-Nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contato</a>
+            <a class="nav-link active" aria-current="page" href="/contato">Contato</a>
           </li>         
       </div>
     </div>
