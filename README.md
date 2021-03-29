@@ -1,62 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Site TecNotocias usando Laravel. 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  
 
-## About Laravel
+Ao baixar ou clonar o projeto.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Você precisa ter o PHP 8 e Composer instalados em sua maquina. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Caso não tenha, baixar a versão php 8 no site https://www.php.net/downloads e escolher a opção Windows downloads. E depois baixar o zip do php. 
 
-## Learning Laravel
+  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Depois de baixar, descompactar em um lugar a qual você não vai deletar. Ex: C:\php-8.   
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Ao terminar de descompactar, copiar o caminho que foi descompactado, como no exemplo acima. 
 
-## Laravel Sponsors
+![caminho php](https://user-images.githubusercontent.com/73076325/112774257-7b271480-900f-11eb-8cd1-e1ce07c8d957.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+Agora aperte a tecla windows + R, e digitar o comando sysdm.cpl, vai abrir uma janela Propriedades do Sistema. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+![sistema](https://user-images.githubusercontent.com/73076325/112774347-cccf9f00-900f-11eb-8487-bc0d9fe79b3f.png)
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Clique na aba avançado, e depois em Variáveis de Ambiente. 
 
-## Code of Conduct
+![propriedades](https://user-images.githubusercontent.com/73076325/112774392-e96bd700-900f-11eb-95ce-4a78ad8d4f2c.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Nessa janela procurar em Variáveis de Sistema a opção Path e dar duplo clique. 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![variaveis](https://user-images.githubusercontent.com/73076325/112774437-0accc300-9010-11eb-9482-6fa02c9a6e7a.png)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Na nova janela aberta clicar em novo e colar o caminho copiado. De ok em todas janelas até fechar todas.
+
+![edivariaveis](https://user-images.githubusercontent.com/73076325/112774468-2afc8200-9010-11eb-92a6-affaa5af3932.png)
+
+
+Agora copie o arquivo php.ini-development e cole ele na mesma pasta do php, renomeei a cópia do php.ini-development para php.ini. 
+
+![phpini](https://user-images.githubusercontent.com/73076325/112774530-6008d480-9010-11eb-81f4-8fe0cf17fd76.png)
+
+
+ 
+
+Se você não tem o composer instalado no Computador, baixar no site https://getcomposer.org/download/ e escolher a opção Composer-Setup.exe. 
+
+Ao terminar de baixar é só seguir a instalação normal do Composer. 
+
+ 
+
+Estamos chegando lá. 
+
+ 
+
+Agora você pode baixar ou clonar o projeto. 
+
+Descompacte ele em uma pasta.  
+
+Depois entre na pasta do projeto. Renomeie o arquivo .env.exemple para .env  
+
+Você agora precisar iniciar o Prompt ou o Powershel. 
+
+No prompt entrar no caminho em que você descompactou. Ex: cd C:\TecNoticias-master 
+
+ Quando você estiver nesse caminho, digite “composer install”.Ele vai instalar todos os pacotes php necessários. 
+
+Digite o comando "php artisan key:generate". Esse vai gerar uma chave para sua aplicação. 
+
+Pronto seu projeto está clonado, compartilhado e instalado. Pronto para qualquer alteração e teste. 
